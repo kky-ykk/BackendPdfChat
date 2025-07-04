@@ -1,6 +1,6 @@
 {
   "name": "langchain-pdfbot",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A LangChain-based tool to answer questions strictly from PDF content using Groq LLM and local embeddings.",
   "main": "index.js",
   "type": "module",
