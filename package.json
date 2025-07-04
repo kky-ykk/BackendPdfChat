@@ -1,0 +1,39 @@
+{
+  "name": "langchain-pdfbot",
+  "version": "1.0.3",
+  "description": "A LangChain-based tool to answer questions strictly from PDF content using Groq LLM and local embeddings.",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "langchain",
+    "pdf",
+    "question-answering",
+    "groq",
+    "vectorstore",
+    "embeddings"
+  ],
+  "author": "kishanyadavcs21@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/langchain-pdfbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/langchain-pdfbot/issues"
+  },
+  "homepage": "https://github.com/yourusername/langchain-pdfbot#readme",
+  "dependencies": {
+    "@huggingface/inference": "^4.2.0",
+    "@langchain/community": "^0.3.47",
+    "@langchain/groq": "^0.2.3",
+    "dotenv": "^16.6.1",
+    "langchain": "^0.3.29",
+    "pdf-parse": "^1.1.1"
+  }
+}
