@@ -1,6 +1,6 @@
 import { ChatGroq } from "@langchain/groq";
 
-export function createLlm({ apiKey, model }) {
+export function createLlm({ apiKey, model="llama3-70b-8192"}) {
   return new ChatGroq({
     apiKey,
     model,

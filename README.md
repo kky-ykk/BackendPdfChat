@@ -38,21 +38,17 @@ GROQ_API_KEY=your_groq_api_key_here
 ## Step 4: Use in your code
 ```bash
 // index.js
-import { createPdfQaTool } from "langchain-pdfbot";
 
-const pdfPath = "docs/YourFile.pdf"; // Replace with your local PDF path
+import {createLlm} from "./model/llm.model.js";
+import {createPdfQaTool} from "./tools/pdfQa.js";
 
-const askQuestion = await createPdfQaTool(pdfPath);
+const llm = createLlm({ apiKey: <groq-api-key>, model: "llama3-70b-8192" });
 
-const question1 = "What topics are covered in this PDF?";
-const answer1 = await askQuestion(question1);
-console.log("Q:", question1);
-console.log("A:", answer1);
+const askQuestion = await createPdfQaTool("./pdfs/sample.pdf", llm);
 
-const question2 = "Who won the FIFA World Cup 2018?";
-const answer2 = await askQuestion(question2);
-console.log("Q:", question2);
-console.log("A:", answer2);
+const answer = await askQuestion("what is array? ");
+console.log("Answer:", answer);
+
 ```
 
 
